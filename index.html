@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Salary Calculator</title>
+</head>
+<body>
+    <form id="calculator">
+        <div style="display: flex;">
+            <div>
+                <h3>Зарплата</h3>
+                от <input type="text" name="salaryFrom" value="1000">
+                до <input type="text" name="salaryTo" value="2000">
+                <select name="salary-period">
+                    <option value="MONTH">в месяц</option>
+                    <option value="DAY">за смену</option>
+                    <option value="HOUR">в час</option>
+                    <option value="FIFO">за вахту</option>
+                </select>
+                <h3>Рассчитанная зарплата в месяц: <span id="monthly-salary" style="color: darkgreen">от 1 000 до 2 000</span></h3>
+                <div>Формула: <span id="formula"></span></div>
+                <h3>Тип занятости</h3>
+                <ul>
+                    <li><input type="radio" name="employment" value="FULL" checked> Полная</li>
+                    <li><input type="radio" name="employment" value="PART"> Частичная</li>
+                    <li><input type="radio" name="employment" value="PROJECT"> Проект или разовое задание</li>
+                    <li>
+                        <input type="radio" name="employment" value="FIFO"> Вахта
+                        <input type="text" name="fifo_days" placeholder="Количество смен" value="30"> дней
+                    </li>
+                </ul>
+
+                <h3>График работы</h3>
+                <ul>
+                    <li><input type="checkbox" name="schedule" value="6/1"> 6/1</li>
+                    <li><input type="checkbox" name="schedule" value="5/2" checked> 5/2</li>
+                    <li><input type="checkbox" name="schedule" value="4/3"> 4/3</li>
+                    <li><input type="checkbox" name="schedule" value="4/2"> 4/2</li>
+                    <li><input type="checkbox" name="schedule" value="3/3"> 3/3</li>
+                    <li><input type="checkbox" name="schedule" value="3/2"> 3/2</li>
+                    <li><input type="checkbox" name="schedule" value="2/2"> 2/2</li>
+                    <li><input type="checkbox" name="schedule" value="2/1"> 2/1</li>
+                    <li><input type="checkbox" name="schedule" value="1/3"> 1/3</li>
+                    <li><input type="checkbox" name="schedule" value="1/2"> 1/2</li>
+                    <li><input type="checkbox" name="schedule" value="2/5"> По выходным</li>
+                    <li><input type="checkbox" name="schedule" value="FREE"> Свободный</li>
+                    <li><input type="checkbox" name="schedule" value="OTHER"> Другое</li>
+                </ul>
+
+                <h3>Рабочие часы в день</h3>
+                <ul>
+                    <li><input type="checkbox" name="hours" value="2"> 2</li>
+                    <li><input type="checkbox" name="hours" value="4"> 4</li>
+                    <li><input type="checkbox" name="hours" value="6"> 6</li>
+                    <li><input type="checkbox" name="hours" value="8" checked> 8</li>
+                    <li><input type="checkbox" name="hours" value="10"> 10</li>
+                    <li><input type="checkbox" name="hours" value="12"> 12</li>
+                    <li><input type="checkbox" name="hours" value="24"> 24</li>
+                    <li><input type="checkbox" name="hours" value="BY_AGREEMENT"> по договоренности</li>
+                    <li><input type="checkbox" name="hours" value="OTHER"> другое</li>
+                </ul>
+            </div>
+            <div id="log" style="margin: 40px;"></div>
+        </div>
+    </form>
+
+
+    <script src="./calc.js"></script>
+</body>
+</html>
